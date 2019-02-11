@@ -1,13 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app is a food tracking app to track daily calories, macro and micro nutrients. The base function will be a track but we wanna emphasize this feature with a clean UI and intuitive flow design.
 
-Things you may want to cover:
+Potential Features:
+ - Rank the quality of a meal
+ - Use dietary guidelines to establish standards
+ - Provide information about acceptable intake, upper limit, and adequite intake.
+ - Cite links for research on the topic.
 
-* Ruby version
+This app is built using:
 
-* System dependencies
+* Ruby 2.6.1
+
+* Dependencies include HAML, SQLite, and Rails
 
 * Configuration
 
