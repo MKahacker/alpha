@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_15_222431) do
+ActiveRecord::Schema.define(version: 2019_02_17_160147) do
 
   create_table "days", force: :cascade do |t|
     t.string "date"
@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 2019_02_15_222431) do
     t.integer "fats"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "food_id"
+    t.index ["food_id"], name: "index_nutritions_on_food_id"
   end
 
 end
