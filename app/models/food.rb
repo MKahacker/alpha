@@ -1,5 +1,5 @@
 class Food < ApplicationRecord
   validates :calories, presence: true
   has_one :nutritions
-  belongs_to :days
+  has_one :days, through :servings 
 end
