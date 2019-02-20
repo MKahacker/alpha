@@ -19,7 +19,6 @@ Day.destroy_all
 @food = Food.create(
   name: "Almond Milk",
   category: "Nondairy Milk",
-  servings: 1.0,
   day_id: @day1
 )
 
