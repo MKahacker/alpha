@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_19_170617) do
+ActiveRecord::Schema.define(version: 2019_02_24_035123) do
 
   create_table "days", force: :cascade do |t|
     t.datetime "date"
@@ -24,8 +24,6 @@ ActiveRecord::Schema.define(version: 2019_02_19_170617) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "category"
-    t.integer "day_id"
-    t.index ["day_id"], name: "index_foods_on_day_id"
   end
 
   create_table "nutritions", force: :cascade do |t|
