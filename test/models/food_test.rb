@@ -6,5 +6,6 @@ class FoodTest < ActiveSupport::TestCase
   end
   test "if validates" do
      refute @no_id.valid?
+     assert @no_id.errors[:name].any?
   end
 end
