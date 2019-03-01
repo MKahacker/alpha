@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-bananaserving:
+bserving:
+  id: 2
   serving: 1.0
-  food_id: Banna
+  food_id: Banana
+  day_id: one
 
 appleserving:
+  id: 3
   serving: 2.0
   food_id: Apple
+  day_id: one
