@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_24_035948) do
+ActiveRecord::Schema.define(version: 2019_03_01_215404) do
 
   create_table "days", force: :cascade do |t|
     t.datetime "date"
@@ -24,6 +24,10 @@ ActiveRecord::Schema.define(version: 2019_02_24_035948) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "category"
+    t.integer "calories"
+    t.integer "carbohydrates"
+    t.integer "protein"
+    t.integer "fat"
   end
 
   create_table "nutritions", force: :cascade do |t|
