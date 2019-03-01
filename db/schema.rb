@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_01_220015) do
+ActiveRecord::Schema.define(version: 2019_03_01_222146) do
 
   create_table "days", force: :cascade do |t|
     t.datetime "date"
@@ -35,8 +35,8 @@ ActiveRecord::Schema.define(version: 2019_03_01_220015) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "food_id"
-    t.integer "days_id"
-    t.index ["days_id"], name: "index_servings_on_days_id"
+    t.integer "day_id"
+    t.index ["day_id"], name: "index_servings_on_day_id"
     t.index ["food_id"], name: "index_servings_on_food_id"
   end
 
