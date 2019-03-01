@@ -2,6 +2,8 @@
 
 bananaserving:
   serving: 1.0
+  food_id: Banna
 
 appleserving:
   serving: 2.0
+  food_id: Apple
