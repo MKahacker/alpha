@@ -2,14 +2,21 @@ require 'test_helper'
 
 class ServingsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @serving = servings(:one)
+    @serving = servings(:bserving)
+  end
+
+  test "serving_count" do
+    assert_equal 2, Serving.count
+  end
+  test "serving has the right id" do
+    assert_equal 2, @serving.id
   end
 
   test "should get index" do
-    get servings_url
+    get '/servings'
     assert_response :success
   end
-
+=begin
   test "should get new" do
     get new_serving_url
     assert_response :success
@@ -45,4 +52,5 @@ class ServingsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to servings_url
   end
+=end
 end
