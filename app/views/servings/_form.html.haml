@@ -1,0 +1,13 @@
+= form_for @serving do |f|
+  - if @serving.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@serving.errors.count, "error")} prohibited this serving from being saved:"
+      %ul
+        - @serving.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :serving
+    = f.text_field :serving
+  .actions
+    = f.submit 'Save'
