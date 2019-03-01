@@ -9,17 +9,16 @@
 Food.destroy_all
 Nutrition.destroy_all
 Day.destroy_all
+Serving.destroy_all
 
 @day1 = Day.create(
-  date:Time.new.to_s,
-  calories: 40,
-  water: 3.0
+  date:Time.new,
+  calories: 40
 )
 
 @food = Food.create(
   name: "Almond Milk",
-  category: "Nondairy Milk",
-  day_id: @day1
+  category: "Nondairy Milk"
 )
 
 @nut = Nutrition.create(
@@ -28,4 +27,10 @@ Day.destroy_all
   protein: 3,
   fats: 3,
   food_id: @food
+)
+
+@serv = Serving.create(
+  serving: 1.5,
+  food_id: @food,
+  days_id: @day1
 )
