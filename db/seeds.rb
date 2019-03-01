@@ -7,30 +7,24 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Food.destroy_all
-Nutrition.destroy_all
 Day.destroy_all
 Serving.destroy_all
 
-@day1 = Day.create(
+@day1 = Day.create!(
   date:Time.new,
   calories: 40
 )
 
-@food = Food.create(
+@food = Food.create!(
   name: "Almond Milk",
   category: "Nondairy Milk"
 )
 
-@nut = Nutrition.create(
-  calories: 40,
-  carbs: 1,
-  protein: 3,
-  fats: 3,
-  food_id: @food
+Serving.create!(
+  serving:1.0,
+  food_id: @food.id,
+  day_id: @day1.id
 )
-
-@serv = Serving.create(
-  serving: 1.5,
-  food_id: @food,
-  days_id: @day1
-)
+#=begin@serv = Serving.create!(
+#  serving: 1.5,
+#)=end
