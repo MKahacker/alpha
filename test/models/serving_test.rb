@@ -22,4 +22,18 @@ class ServingTest < ActiveSupport::TestCase
     @new_serv.save
     assert_equal 3, Serving.all.count
   end
+
+  test "When adding a serving less than zero it doesn't accept" do
+    refute Serving.create(serving: -1.0).valid?
+  end
+
+  test "When adding a character or boolean value its not valid" do
+    refute Serving.create(serving: "t").valid?
+    refute Serving.create(serving: true).valid?
+  end
+
+  test "Adding a serving that is equal or greater than zero is valid" do
+    assert Serving.create(serving: 0).valid?
+    assert Serving.create(serving: 10.0).valid?
+  end
 end
