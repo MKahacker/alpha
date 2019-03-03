@@ -12,6 +12,10 @@ class ServingsControllerTest < ActionDispatch::IntegrationTest
     assert_equal 2, @serving.id
   end
 
+  test "root gets you to index" do
+    assert_recognizes({controller: 'servings', action: 'index'}, '/')
+  end
+
   test "should get index" do
     get servings_url
     assert_response :success
