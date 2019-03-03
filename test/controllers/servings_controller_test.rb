@@ -13,10 +13,10 @@ class ServingsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get index" do
-    get '/servings'
+    get servings_url
     assert_response :success
   end
-=begin
+
   test "should get new" do
     get new_serving_url
     assert_response :success
@@ -52,5 +52,4 @@ class ServingsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to servings_url
   end
-=end
 end
