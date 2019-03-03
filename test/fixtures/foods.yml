@@ -4,8 +4,16 @@ Banna:
   id: 1
   name: Banana
   category: Fruit
+  calories: 1000
+  carbohydrates: 23
+  protein: 3
+  fat: 2
 
 Apple:
   id: 2
   name: Apple
   category: Fruit
+  calories: 1000
+  carbohydrates: 30
+  protein: 2
+  fat: 2

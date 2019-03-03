@@ -2,10 +2,10 @@
 
 one:
   id: 1
-  date: Date.new
+  date: Date.today
   calories: 1456
 
 two:
   id: 2
-  date: Date.new
+  date: Date.today
   calories: 1565
