@@ -17,7 +17,8 @@ Serving.destroy_all
 
 @food = Food.create!(
   name: "Almond Milk",
-  category: "Nondairy Milk"
+  category: "Nondairy Milk",
+  calories: 30
 )
 
 Serving.create!(
