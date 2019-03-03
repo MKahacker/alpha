@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   date: Date.new
   calories: 1456
 
 two:
+  id: 2
   date: Date.new
   calories: 1565
