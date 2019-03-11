@@ -3,7 +3,9 @@
 %table
   %thead
     %tr
+      %th Name
       %th Serving
+      %th Calories
       %th
       %th
       %th
@@ -11,7 +13,9 @@
   %tbody
     - @servings.each do |serving|
       %tr
+        %td= serving.food.name
         %td= serving.serving
+        %td= serving.food.calories
         %td= link_to 'Show', serving
         %td= link_to 'Edit', edit_serving_path(serving)
         %td= link_to 'Destroy', serving, method: :delete, data: { confirm: 'Are you sure?' }
