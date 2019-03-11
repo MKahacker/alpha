@@ -32,8 +32,8 @@ class ServingTest < ActiveSupport::TestCase
     refute Serving.create(serving: true).valid?
   end
 
-  test "Adding a serving that is equal or greater than zero is valid" do
-    assert Serving.create(serving: 0).valid?
+  test "Adding a serving that is equal or greater than 0.01 is valid" do
+    assert Serving.create(serving: 0.01).valid?
     assert Serving.create(serving: 10.0).valid?
   end
 end
