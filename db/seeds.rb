@@ -15,15 +15,26 @@ Serving.destroy_all
   calories: 40
 )
 
-@food = Food.create!(
+@food1 = Food.create!(
   name: "Almond Milk",
   category: "Nondairy Milk",
   calories: 30
 )
 
+@food2 = Food.create!(
+  name: "Salted Peanuts",
+  category: "Nuts",
+  calories: 290
+)
+
 Serving.create!(
   serving:1.0,
-  food_id: @food.id,
+  food_id: @food1.id,
+  day_id: @day1.id
+)
+Serving.create!(
+  serving:1.0,
+  food_id: @food2.id,
   day_id: @day1.id
 )
 #=begin@serv = Serving.create!(
