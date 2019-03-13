@@ -9,4 +9,9 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    %header#header
+      %h1 Food Tracker
+      %p.tagline Know what nutrients you are consuming
     = yield
+    %footer#footer
+      %small Designed and developed by Mahmoud Kahack. All rights reserved.
