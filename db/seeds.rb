@@ -35,13 +35,13 @@ Serving.destroy_all
 
 Serving.create!(
   serving:1.0,
-  food_id: @food1.id,
-  day_id: @day1.id
+  food: @food1,
+  day: @day1
 )
 Serving.create!(
   serving:1.0,
-  food_id: @food2.id,
-  day_id: @day1.id
+  food: @food2,
+  day: @day1
 )
 #=begin@serv = Serving.create!(
 #  serving: 1.5,
