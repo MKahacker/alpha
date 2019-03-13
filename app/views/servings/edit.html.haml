@@ -2,6 +2,7 @@
 
 = render 'form'
 
-= link_to 'Show', @serving
-\|
-= link_to 'Back', servings_path
+%footer
+  %ul.controls
+    %li= link_to 'Show', @serving
+    %li= link_to 'Back', servings_path
