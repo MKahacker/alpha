@@ -18,13 +18,19 @@ Serving.destroy_all
 @food1 = Food.create!(
   name: "Almond Milk",
   category: "Nondairy Milk",
-  calories: 30
+  calories: 30,
+  carbohydrates: 1,
+  protein: 2,
+  fat: 2.5
 )
 
 @food2 = Food.create!(
   name: "Salted Peanuts",
   category: "Nuts",
-  calories: 290
+  calories: 290,
+  carbohydrates: 3,
+  protein: 10,
+  fat: 20
 )
 
 Serving.create!(
