@@ -1,21 +1,32 @@
 %p#notice= notice
 
-%section
-  %h3 Serving:
-  = @serving.serving
-  %h3 Food:
-  %h4 name:
-  = @serving.food.name
-  %h4 category:
-  = @serving.food.category
-  %h4 calories:
-  = @serving.food.calories
-  %h4 carbs:
-  = @serving.food.carbohydrates.to_s + "g"
-  %h4 proteins:
-  = @serving.food.protein.to_s + "g"
-  %h4 fats:
-  = @serving.food.fat.to_s + "g"
-= link_to 'Edit', edit_serving_path(@serving)
-\|
-= link_to 'Back', servings_path
+%ul
+  %li
+    %h3 Serving:
+    = @serving.serving
+  %li
+    %h3 Food:
+  %li
+    %h4 name:
+    = @serving.food.name
+  %li
+    %h4 category:
+    = @serving.food.category
+  %li
+    %h4 calories:
+    = @serving.food.calories
+  %li
+    %h4 carbs:
+    = @serving.food.carbohydrates.to_s + "g"
+  %li
+    %h4 proteins:
+    = @serving.food.protein.to_s + "g"
+  %li
+    %h4 fats:
+    = @serving.food.fat.to_s + "g"
+
+  %ul.controls
+    %li= link_to 'Edit', edit_serving_path(@serving)
+    %li= link_to 'Delete', @post, method: :delete, data:{confirm: 'Are you sure?'}
+%footer
+  = link_to 'Back', servings_path
