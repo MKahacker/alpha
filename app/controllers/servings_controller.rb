@@ -69,6 +69,6 @@ class ServingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def serving_params
-      params.require(:serving).permit(:serving)
+      params.require(:serving).permit(:serving, :food_name)
     end
 end
