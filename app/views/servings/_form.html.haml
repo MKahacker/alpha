@@ -6,8 +6,12 @@
         - @serving.errors.full_messages.each do |message|
           %li= message
 
-  .field
-    = f.label :serving
-    = f.text_field :serving
-  .actions
-    = f.submit 'Save'
+  %ol.inputs
+    %li
+      = f.label :serving
+      = f.text_field :serving
+    %li
+      = f.label :food
+      = f.text_field :food
+    %li.actions
+      = f.submit 'Save'
