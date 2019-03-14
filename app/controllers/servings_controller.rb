@@ -14,7 +14,7 @@ class ServingsController < ApplicationController
 
   # GET /servings/new
   def new
-    @serving = Serving.new
+    @serving = Serving.new # Only use because view uses @serving
   end
 
   # GET /servings/1/edit
