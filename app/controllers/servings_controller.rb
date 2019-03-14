@@ -27,15 +27,16 @@ class ServingsController < ApplicationController
     @serving = Serving.new(serving_params)
     if !(@serving.food_name)
       redirect_to "/foods/new"
-      return 0
-    end
-    respond_to do |format|
-      if @serving.save
-        format.html { redirect_to @serving, notice: 'Serving was successfully created.' }
-        format.json { render :show, status: :created, location: @serving }
-      else
-        format.html { render :new }
-        format.json { render json: @serving.errors, status: :unprocessable_entity }
+      
+    else
+      respond_to do |format|
+        if @serving.save
+          format.html { redirect_to @serving, notice: 'Serving was successfully created.' }
+          format.json { render :show, status: :created, location: @serving }
+        else
+          format.html { render :new }
+          format.json { render json: @serving.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
