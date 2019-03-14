@@ -6,5 +6,24 @@
         - @food.errors.full_messages.each do |message|
           %li= message
 
-  .actions
-    = f.submit 'Save'
+  %ol.inputs
+    %li
+      = f.label :name, "Food Name"
+      = f.text_field :name
+    %li
+      = f.label :category
+      = f.text_field :category
+    %li
+      = f.label :calories
+      = f.text_field :calories
+    %li
+      = f.label :carbohydrates
+      = f.text_field :carbohydrates
+    %li
+      = f.label :protein
+      = f.text_field :protein
+    %li
+      = f.label :fat
+      = f.text_field :fat
+    %li.actions
+      = f.submit 'Save'
