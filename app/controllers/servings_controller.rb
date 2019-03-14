@@ -25,7 +25,10 @@ class ServingsController < ApplicationController
   # POST /servings.json
   def create
     @serving = Serving.new(serving_params)
-
+    if !(@serving.food_name)
+      redirect_to "/foods/new"
+      return 0
+    end
     respond_to do |format|
       if @serving.save
         format.html { redirect_to @serving, notice: 'Serving was successfully created.' }
