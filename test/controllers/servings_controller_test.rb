@@ -4,7 +4,9 @@ class ServingsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @serving = servings(:bserving)
   end
-
+  test "Food name exists" do
+    assert_equal "Banana", @serving.food.name
+  end
   test "serving_count" do
     assert_equal 2, Serving.count
   end
