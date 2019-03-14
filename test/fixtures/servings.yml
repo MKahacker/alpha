@@ -3,11 +3,12 @@
 bserving:
   id: 2
   serving: 1.0
-  food_id: Banana
+  food_id: 1
   day_id: one
+
 
 appleserving:
   id: 3
   serving: 2.0
-  food_id: Apple
+  food_id: 2
   day_id: one
