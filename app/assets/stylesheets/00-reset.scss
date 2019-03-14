@@ -9,30 +9,23 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 /* Begin site styles below */
 
 //Variables
-$base_font_size: 20px;
+$base_font_size: 18px;
 $topo_ratio: 1.5;
 
 //Functions
 @function convert-px-em($s, $context:$base_font_size){
   @return ($s/$context) * 1em;
 }
-@function raise($a, $b){
-  $mult: 1;
-  @for $i from 0 to $b{
-    $mult: $mult*$a;
-  }
-  @return $mult;
-}
-@function topography($factor, $ratio:$topo_ratio){
-  @return $base_font_size*raise($ratio, $factor);
-}
 
 /* Base Styles (HTML Selectors) */
 html{
-  font-size: convert-px-em($base_font_size,16px); /* 20px /16px = 1.25em*/
+  font-size: convert-px-em($base_font_size,16px); /* 18px/16px = 1.25em*/
 }
 h1{
-  font-size: topography(2);
+  font-size: convert-px-em(36px);
+}
+h2{
+  font-size: convert-px-em(30px);
 }
 
 /*Layout Styles(IDs)*/
