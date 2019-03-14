@@ -25,11 +25,20 @@ h1{
   font-size: convert-px-em(36px);
 }
 h2{
+  margin-top: convert-px-em(9px);
   font-size: convert-px-em(30px);
+}
+form{
+  margin: convert-px-em(18px) 0;
 }
 
 /*Layout Styles(IDs)*/
 
 /*Modular Styles(Classes)*/
+.tagline{
+  margin-left: convert-px-em(3px);
+  font-size: convert-px-em(14px);
+  color: blue;
+}
 
 /*State Styles(Media queries, JS)*/
