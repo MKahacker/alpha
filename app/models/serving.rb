@@ -8,6 +8,6 @@ class Serving < ApplicationRecord
   end
 
   def food_name=(name)
-    self.food = Food.find_or_create_by(name: name)
+    self.food = Food.find_by(name: name)
   end
 end
