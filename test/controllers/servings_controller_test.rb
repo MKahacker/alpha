@@ -27,10 +27,10 @@ class ServingsControllerTest < ActionDispatch::IntegrationTest
     get new_serving_url
     assert_response :success
   end
-
-  test "should create serving" do
+  # TODO :- Make sure that you create a test for when the food name is invalid.
+  test "should create serving if parameters are valid" do
     assert_difference('Serving.count') do
-      post servings_url, params: { serving: { serving: @serving.serving } }
+      post servings_url, params: { serving: { serving: @serving.serving, food_name: "Banana" } }
     end
 
     assert_redirected_to serving_url(Serving.last)
