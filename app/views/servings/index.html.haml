@@ -4,19 +4,26 @@
       %th Name
       %th Serving
       %th Calories
-      %th
-      %th
-      %th
+      -# %th
+      -# %th
+      -# %th
 
   %tbody
+    %tr.space
+      %td
     - @servings.each do |serving|
       %tr
         %td= serving.food_name
         %td= serving.serving
         %td= serving.food.calories
-        %td= link_to 'Show', serving
-        %td= link_to 'Edit', edit_serving_path(serving)
-        %td= link_to 'Destroy', serving, method: :delete, data: { confirm: 'Are you sure?' }
+      %tr.entry_actions
+        -#TODO: include icons for actions.
+        %td
+          = link_to 'Show', serving
+          = link_to 'Edit', edit_serving_path(serving)
+          = link_to 'Destroy', serving, method: :delete, data: { confirm: 'Are you sure?' }
+        %td
+        %td
 
 %br
 
