@@ -11,6 +11,9 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 //Variables
 $base_font_size: 18px;
 $topo_ratio: 1.5;
+$background_site: white;
+$first_row_color: #D7D7D7;
+$second_row_color: yellow;
 
 //Functions
 @function convert-px-em($s, $context:$base_font_size){
@@ -31,6 +34,19 @@ h2{
 form{
   margin: convert-px-em(18px) 0;
 }
+table{
+  font-size: convert-px-em(15px);
+  margin: convert-px-em(15px) convert-px-em(3px);
+}
+tr{
+  margin-bottom: convert-px-em(5px);
+}
+th{
+  text-align: left;
+}
+td{
+  background-color: $first_row_color;
+}
 
 /*Layout Styles(IDs)*/
 
@@ -40,5 +56,20 @@ form{
   font-size: convert-px-em(14px);
   color: blue;
 }
+.entry_actions{
+  td{
+    width: convert-px-em(150px)
+  }
+}
+.space{
+  td{
+    background-color: $background_site;
+    height: convert-px-em(10px);
+  }
+}
 
+//TODO: find out how to alternate colors between data rows.
+// tbody:nth-child(3n+1){
+//   background-color: $second_row_color;
+// }
 /*State Styles(Media queries, JS)*/
