@@ -37,16 +37,20 @@ form{
 table{
   font-size: convert-px-em(15px);
   margin: convert-px-em(15px) convert-px-em(3px);
+  thead{
+    border-bottom: thin solid;
+    th{
+      text-align: left;
+    }
+  }
+  tr{
+    margin-bottom: convert-px-em(5px);
+  }
+  td{
+    background-color: $first_row_color;
+  }
 }
-tr{
-  margin-bottom: convert-px-em(5px);
-}
-th{
-  text-align: left;
-}
-td{
-  background-color: $first_row_color;
-}
+
 
 /*Layout Styles(IDs)*/
 
