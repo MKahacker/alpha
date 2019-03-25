@@ -26,8 +26,9 @@ class ServingsController < ApplicationController
   def create
     @serving = Serving.new(serving_params)
     if !(@serving.food_name)
-      redirect_to "/foods/new"
-      
+      session[:serving_quantity] = params[:serving]
+      redirect_to foods_new_url
+
     else
       respond_to do |format|
         if @serving.save
