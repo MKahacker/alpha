@@ -2,29 +2,27 @@
 %ul
   %li
     %h3 Food Name:
-    = @serving.food.name
+    %p= @serving.food.name
   %li
     %h3 Serving:
-    = @serving.serving
+    %p= @serving.serving
   %li
     %h3 Category:
-    = @serving.food.category
+    %p= @serving.food.category
   %li
     %h3 Calories:
-    = @serving.food.calories
+    %p= @serving.food.calories
   %li
     %h3 Carbs:
-    = @serving.food.carbohydrates.to_s + "g"
+    %p= @serving.food.carbohydrates.to_s + "g"
   %li
     %h3 Proteins:
-    = @serving.food.protein.to_s + "g"
+    %p= @serving.food.protein.to_s + "g"
   %li
     %h3 Fats:
-    = @serving.food.fat.to_s + "g"
+    %p= @serving.food.fat.to_s + "g"
 %ul.controls
   %li
+    = link_to 'Back', servings_path
     = link_to 'Edit', edit_serving_path(@serving)
     = link_to 'Delete', @post, method: :delete, data:{confirm: 'Are you sure?'}
-
-%footer
-  = link_to 'Back', servings_path
