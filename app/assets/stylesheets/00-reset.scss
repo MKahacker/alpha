@@ -69,8 +69,14 @@ ul{
 
   li{
     margin: convert-px-em(15px) 0;
+    p{
+      display: inline-block;
+      float: right;
+    }
     h3{
+      display: inline-block;
       font-weight:700;
+      text-align: left;
     }
   }
 }
@@ -116,7 +122,7 @@ ul{
       border: thin solid black;
       border-radius: convert-px-em(5px);
       padding: convert-px-em(5px) convert-px-em(20px);
-      margin: convert-px-em(10px) convert-px-em(40px);
+      margin: convert-px-em(10px) convert-px-em(10px);
       background-color: $button_color;
       color: black;
     }
