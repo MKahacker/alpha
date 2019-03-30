@@ -30,15 +30,16 @@ h1{
 }
 h2{
   margin-top: convert-px-em(9px);
-  font-size: convert-px-em(30px);
+  font-size: convert-px-em(25px);
+  border-bottom: thin solid black;
 }
 form{
   margin: convert-px-em(18px) 0;
 }
 table{
   font-size: convert-px-em(15px);
-  margin: convert-px-em(15px) convert-px-em(3px);
-  width: 100%;
+  margin: 0 convert-px-em(3px);
+  width: 99%;
   thead{
     border-bottom: thin solid;
     th{
@@ -65,7 +66,7 @@ table{
 }
 
 ul{
-  margin: convert-px-em(5px);
+  margin:convert-px-em(5px);
 
   li{
     margin: convert-px-em(15px) 0;
@@ -82,20 +83,26 @@ ul{
 }
 
 /*Layout Styles(IDs)*/
-#new_serving_button{
-  list-style: none;
-  border: thin solid black;
-  border-radius: convert-px-em(5px);
-  padding: convert-px-em(5px);
-  margin: convert-px-em(15px) convert-px-em(2px);
-  margin-left: convert-px-em(1000px);
-  width: convert-px-em(125px);
-  float: right;
+// #new_serving_button{
+//   list-style: none;
+//   border: thin solid black;
+//   border-radius: convert-px-em(5px);
+//   padding: convert-px-em(5px);
+//   margin: convert-px-em(15px) convert-px-em(2px);
+//   margin-left: convert-px-em(1000px);
+//   width: convert-px-em(125px);
+//   float: right;
+//   background-color: $button_color;
+//   a{
+//     text-decoration: none;
+//     color: black;
+//   }
+// }
+#header{
+  color: black;
   background-color: $button_color;
-  a{
-    text-decoration: none;
-    color: black;
-  }
+  padding: convert-px-em(10px) 0;
+  text-align: center;
 }
 /*Modular Styles(Classes)*/
 .tagline{
@@ -120,13 +127,16 @@ ul{
       text-decoration: none;
       display: inline-block;
       border: thin solid black;
-      border-radius: convert-px-em(5px);
-      padding: convert-px-em(5px) convert-px-em(20px);
+      border-radius: convert-px-em(10px);
+      padding: convert-px-em(10px) convert-px-em(20px);
       margin: convert-px-em(10px) convert-px-em(10px);
       background-color: $button_color;
       color: black;
     }
   }
+}
+.tagline{
+  display: none;
 }
 
 //TODO: find out how to alternate colors between data rows.
