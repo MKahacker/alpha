@@ -1,9 +1,9 @@
 %table
-  %thead
-    %tr
-      %th Name
-      %th Serving
-      %th Calories
+  -# %thead
+  -#   %tr
+  -#     %th Name
+  -#     %th Serving
+  -#     %th Calories
       -# %th
       -# %th
       -# %th
@@ -13,15 +13,16 @@
       %td
     - @servings.each do |serving|
       %tr
-        %td= serving.food_name
-        %td= serving.serving
+        %td= link_to serving.food_name, serving
         %td= serving.food.calories
+        %td
+          -# = link_to 'Show', serving
+          = link_to image_tag("edit.png"), edit_serving_path(serving)
+          = link_to image_tag("trash.png"), serving, method: :delete, data: { confirm: 'Are you sure?' }
       %tr.entry_actions
         -#TODO: include icons for actions.
-        %td
-          = link_to 'Show', serving
-          = link_to 'Edit', edit_serving_path(serving)
-          = link_to 'Destroy', serving, method: :delete, data: { confirm: 'Are you sure?' }
+        %td= serving.serving.to_s + " serving"
+
         %td
         %td
 
