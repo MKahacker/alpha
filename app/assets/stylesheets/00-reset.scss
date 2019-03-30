@@ -37,6 +37,7 @@ form{
 table{
   font-size: convert-px-em(15px);
   margin: convert-px-em(15px) convert-px-em(3px);
+  width: 100%;
   thead{
     border-bottom: thin solid;
     th{
@@ -45,15 +46,40 @@ table{
   }
   tr{
     margin-bottom: convert-px-em(5px);
-  }
-  td{
-    background-color: $first_row_color;
+    td.food_name{
+      font-size: convert-px-em(22px);
+      width: convert-px-em(200px);
+      a{
+        text-decoration: none;
+        color: black;
+      }
+    }
+    td.right_align{
+        text-align: right;
+        padding-right: convert-px-em(10px);
+        padding-top: convert-px-em(10px);
+        font-size: convert-px-em(22px);
+    }
   }
 }
 
 
 /*Layout Styles(IDs)*/
-
+#new_serving_button{
+  list-style: none;
+  border: thin solid black;
+  border-radius: convert-px-em(5px);
+  padding: convert-px-em(5px);
+  margin: convert-px-em(15px) convert-px-em(2px);
+  margin-left: convert-px-em(1000px);
+  width: convert-px-em(125px);
+  float: right;
+  background-color: #ADFF2F;
+  a{
+    text-decoration: none;
+    color: black;
+  }
+}
 /*Modular Styles(Classes)*/
 .tagline{
   margin-left: convert-px-em(3px);
