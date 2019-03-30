@@ -14,7 +14,7 @@
     - @servings.each do |serving|
       %tr
         %td= link_to serving.food_name, serving
-        %td= serving.food.calories
+        %td= serving.food.calories.to_s + " cal"
         %td
           -# = link_to 'Show', serving
           = link_to image_tag("edit.png"), edit_serving_path(serving)
