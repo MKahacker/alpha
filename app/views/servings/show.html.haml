@@ -1,5 +1,4 @@
 %p#notice= notice
-
 %ul
   %li
     %h3 Food Name:
@@ -22,9 +21,10 @@
   %li
     %h3 Fats:
     = @serving.food.fat.to_s + "g"
+%ul.controls
+  %li
+    = link_to 'Edit', edit_serving_path(@serving)
+    = link_to 'Delete', @post, method: :delete, data:{confirm: 'Are you sure?'}
 
-  %ul.controls
-    %li= link_to 'Edit', edit_serving_path(@serving)
-    %li= link_to 'Delete', @post, method: :delete, data:{confirm: 'Are you sure?'}
 %footer
   = link_to 'Back', servings_path
