@@ -5,24 +5,22 @@
     %h3 Serving:
     = @serving.serving
   %li
-    %h3 Food:
-  %li
-    %h4 name:
+    %h3 Food Name:
     = @serving.food.name
   %li
-    %h4 category:
+    %h3 Category:
     = @serving.food.category
   %li
-    %h4 calories:
+    %h3 Calories:
     = @serving.food.calories
   %li
-    %h4 carbs:
+    %h3 Carbs:
     = @serving.food.carbohydrates.to_s + "g"
   %li
-    %h4 proteins:
+    %h3 Proteins:
     = @serving.food.protein.to_s + "g"
   %li
-    %h4 fats:
+    %h3 Fats:
     = @serving.food.fat.to_s + "g"
 
   %ul.controls
