@@ -1,3 +1,4 @@
+%h2 Your Food
 %table
   -# %thead
   -#   %tr
@@ -9,8 +10,6 @@
       -# %th
 
   %tbody
-    %tr.space
-      %td
     - @servings.each do |serving|
       %tr
         %td.food_name= link_to serving.food_name, serving
@@ -25,5 +24,6 @@
 
         %td
         %td
-%li#new_serving_button= link_to 'New Serving', new_serving_path
+%ul.controls
+  %li= link_to 'New Serving', new_serving_path
 %br
