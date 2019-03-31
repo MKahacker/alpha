@@ -1,4 +1,6 @@
 %h2 Your Food
+%ul.controls
+  %li#new_serving_btn= link_to 'Add New Item', new_serving_path
 %table
   -# %thead
   -#   %tr
@@ -24,6 +26,5 @@
 
         %td
         %td
-%ul.controls
-  %li= link_to 'New Serving', new_serving_path
+
 %br
