@@ -31,7 +31,6 @@ h1{
 h2{
   margin-top: convert-px-em(15px);
   font-size: convert-px-em(25px);
-  border-bottom: thin solid black;
   padding-bottom: convert-px-em(7px);
 }
 form{
@@ -102,7 +101,7 @@ ul{
 #header{
   color: black;
   background-color: $button_color;
-  padding: convert-px-em(10px) 0;
+  padding: convert-px-em(15px) 0;
   text-align: center;
   border-bottom: solid thin black;
 }
@@ -117,19 +116,19 @@ ul{
 
 #back_btn_new_serv{
   position: absolute;
-  top: convert-px-em(190px);
+  top: convert-px-em(199px);
   left: convert-px-em(1px);
 }
 
 #back_btn_new_food{
   position: absolute;
-  top: convert-px-em(355px);
+  top: convert-px-em(363px);
   left: convert-px-em(1px);
 }
 
 #new_serving_btn{
   position: absolute;
-  top: convert-px-em(65px);
+  top: convert-px-em(70px);
   right: convert-px-em(2px);
   a{
     padding: convert-px-em(5px);
