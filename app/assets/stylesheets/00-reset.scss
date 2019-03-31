@@ -40,12 +40,12 @@ table{
   font-size: convert-px-em(15px);
   margin: 0 convert-px-em(3px);
   width: 99%;
-  thead{
-    border-bottom: thin solid;
-    th{
-      text-align: left;
-    }
-  }
+  // thead{
+  //   border-bottom: thin solid;
+  //   th{
+  //     text-align: left;
+  //   }
+  // }
   tr{
     margin-bottom: convert-px-em(5px);
     td.food_name{
@@ -195,6 +195,9 @@ ul{
     }
   }
 }
+.desktop_items{
+  display: none;
+}
 
 
 //TODO: find out how to alternate colors between data rows.
@@ -202,3 +205,28 @@ ul{
 //   background-color: $second_row_color;
 // }
 /*State Styles(Media queries, JS)*/
+@media(min-width: convert-px-em(1000px)){
+  h2{
+    font-size: convert-px-em(30px);
+  }
+  table{
+    margin-left: convert-px-em(15px);
+    margin-right: convert-px-em(15px);
+  }
+  tr.entry_actions{
+    padding-bottom: convert-px-em(25px);
+  }
+  .desktop_items{
+    display: table-cell;
+    width: convert-px-em(200px);
+  }
+  #title_food_index{
+    padding-bottom: convert-px-em(24px);
+    padding-left: convert-px-em(5px);
+    border-bottom: solid thin black;
+  }
+  #new_serving_btn{
+    top: convert-px-em(115px);
+    left: convert-px-em(10px);
+  }
+}
