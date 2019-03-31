@@ -27,7 +27,7 @@ class ServingsController < ApplicationController
     @serving = Serving.new(serving_params)
     if !(@serving.food_name)
       session[:serving_quantity] = params[:serving]
-      redirect_to foods_new_url
+      redirect_to foods_new_url(serving_params)
 
     else
       respond_to do |format|

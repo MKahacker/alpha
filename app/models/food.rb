@@ -3,4 +3,13 @@ class Food < ApplicationRecord
   validates :category, presence: {message: "Category shouldn't be blank"}
   validates :calories, presence: {message: "Calories shouldn't be blank"}, numericality: {greater_than_or_equal_to: 0, only_integer: true}
   has_one :day, through: :serving
+
+  @serving = 0
+  def food_serving
+    @serving ? @serving : nil
+  end
+
+  def food_serving=(serving)
+    @serving = serving
+  end
 end
