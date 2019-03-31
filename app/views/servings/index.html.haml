@@ -15,6 +15,9 @@
     - @servings.each do |serving|
       %tr
         %td.food_name= link_to serving.food_name, serving
+        %td.desktop_items.right_align= serving.food.carbohydrates.to_s + "g of Carbohydrates"
+        %td.desktop_items.right_align= serving.food.fat.to_s + "g of Fat"
+        %td.desktop_items.right_align=serving.food.protein.to_s + "g of Protein"
         %td.right_align= serving.food.calories.to_s + " cal"
         %td.right_align
           -# = link_to 'Show', serving
