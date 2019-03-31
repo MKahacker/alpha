@@ -208,25 +208,59 @@ ul{
 @media(min-width: convert-px-em(1000px)){
   h2{
     font-size: convert-px-em(30px);
+    padding-left: convert-px-em(7px);
   }
   table{
     margin-left: convert-px-em(15px);
     margin-right: convert-px-em(15px);
   }
-  tr.entry_actions{
+  .entry_actions{
     padding-bottom: convert-px-em(25px);
   }
   .desktop_items{
     display: table-cell;
     width: convert-px-em(200px);
   }
+  .inputs{
+    margin-left: convert-px-em(15px);
+    margin-right: convert-px-em(15px);
+    li{
+      margin-left: 30%;
+      label{
+        display: inline-block;
+        font-size: convert-px-em(24px);
+        width: convert-px-em(200px);
+      }
+      input{
+        font-size: convert-px-em(20px);
+        float: none;
+      }
+    }
+    .actions{
+      input{
+        margin-left: convert-px-em(475px);
+      }
+    }
+  }
   #title_food_index{
-    padding-bottom: convert-px-em(24px);
-    padding-left: convert-px-em(5px);
     border-bottom: solid thin black;
+    padding-left: convert-px-em(5px);
+    padding-bottom: convert-px-em(24px);
   }
   #new_serving_btn{
     top: convert-px-em(115px);
     left: convert-px-em(10px);
+  }
+  #back_btn_new_serv{
+    top: convert-px-em(244px);
+    left: convert-px-em(700px);
+  }
+  #back_btn_new_food{
+    top: convert-px-em(375px);
+  }
+  #footer{
+    small{
+      padding-left: convert-px-em(15px);
+    }
   }
 }
