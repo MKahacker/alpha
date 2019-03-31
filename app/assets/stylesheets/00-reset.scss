@@ -104,6 +104,13 @@ ul{
   padding: convert-px-em(10px) 0;
   text-align: center;
 }
+
+#back_btn_new{
+  position: absolute;
+  top: convert-px-em(171px);
+  left: convert-px-em(1px);
+}
+
 /*Modular Styles(Classes)*/
 .tagline{
   margin-left: convert-px-em(3px);
@@ -137,6 +144,29 @@ ul{
 }
 .tagline{
   display: none;
+}
+.inputs{
+  li{
+    margin-bottom: convert-px-em(15px);
+    input{
+      width: convert-px-em(200px);
+      float: right;
+    }
+  }
+  .actions{
+    input{
+      font-size: convert-px-em(16px);
+      border: thin solid black;
+      border-radius: convert-px-em(10px);
+      padding: convert-px-em(10px) convert-px-em(20px);
+      margin: convert-px-em(20px) convert-px-em(10px);
+      background-color: $button_color;
+      color: black;
+      float: none;
+      width: convert-px-em(100px);
+      margin-left: convert-px-em(123px);
+    }
+  }
 }
 
 //TODO: find out how to alternate colors between data rows.
