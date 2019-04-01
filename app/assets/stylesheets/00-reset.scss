@@ -198,6 +198,11 @@ ul{
 .desktop_items{
   display: none;
 }
+.food_not_found{
+  padding-top: convert-px-em(18px);
+  padding-left: convert-px-em(2px);
+  font-weight:700;
+}
 
 
 //TODO: find out how to alternate colors between data rows.
@@ -242,6 +247,14 @@ ul{
       }
     }
   }
+  .food_not_found{
+    font-size: convert-px-em(22px);
+    border: thin solid black;
+    text-align: center;
+    padding: convert-px-em(10px);
+    background-color: #A8A8A8;
+    font-weight: 500;
+  }
   #title_food_index{
     border-bottom: solid thin black;
     padding-left: convert-px-em(5px);
@@ -256,7 +269,7 @@ ul{
     left: convert-px-em(700px);
   }
   #back_btn_new_food{
-    top: convert-px-em(493px);
+    top: convert-px-em(475px);
     left: convert-px-em(700px);
   }
   #footer{
