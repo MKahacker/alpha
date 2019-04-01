@@ -21,6 +21,23 @@ class ServingsTest < ApplicationSystemTestCase
     assert_text (@serving.serving+1).to_s
     click_on "Back"
   end
+  test "creating a Serving with unknown food" do
+    visit servings_url
+    click_on "Add New Item"
+
+    fill_in "Serving", with: @serving.serving
+    fill_in "Food Name", with: "Bizzaro"
+    click_on "Save"
+
+    fill_in "Category", with: "Something"
+    fill_in "Calories", with: 10000
+    fill_in "Carbohydrates", with: 40
+    fill_in "Protein", with: 40
+    fill_in "Fat", with: 40
+    click_on "Save"
+    
+    assert_text "Bizzaro"
+  end
 
   test "updating a Serving" do
     visit serving_url(@serving)
