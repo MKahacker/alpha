@@ -2,42 +2,43 @@ require "application_system_test_case"
 
 class ServingsTest < ApplicationSystemTestCase
   setup do
-    @serving = servings(:one)
+    @serving = servings(:bserving)
   end
 
   test "visiting the index" do
     visit servings_url
-    assert_selector "h1", text: "Servings"
+    assert_selector "h2", text: "Your Food"
   end
 
   test "creating a Serving" do
     visit servings_url
-    click_on "New Serving"
+    click_on "Add New Item"
 
-    fill_in "Serving", with: @serving.serving
-    click_on "Create Serving"
+    fill_in "Serving", with: (@serving.serving + 1)
+    fill_in "Food Name", with: @serving.food_name
+    click_on "Save"
 
-    assert_text "Serving was successfully created"
+    assert_text (@serving.serving+1).to_s
     click_on "Back"
   end
 
   test "updating a Serving" do
-    visit servings_url
+    visit serving_url(@serving)
     click_on "Edit", match: :first
 
-    fill_in "Serving", with: @serving.serving
-    click_on "Update Serving"
+    fill_in "Serving", with: (@serving.serving + 1)
+    click_on "Save"
 
-    assert_text "Serving was successfully updated"
+    assert_text (@serving.serving+1).to_s
     click_on "Back"
   end
 
   test "destroying a Serving" do
-    visit servings_url
+    visit serving_url(@serving)
     page.accept_confirm do
-      click_on "Destroy", match: :first
+      click_on "Delete", match: :first
     end
 
-    assert_text "Serving was successfully destroyed"
+    assert_no_text @serving.food_name
   end
 end
