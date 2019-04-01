@@ -10,7 +10,7 @@
     %p= @serving.food.category
   %li
     %h3 Calories:
-    %p= @serving.food.calories
+    %p= @serving.food.calories.to_s + " cal"
   %li
     %h3 Carbs:
     %p= @serving.food.carbohydrates.to_s + "g"
