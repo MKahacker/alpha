@@ -66,21 +66,27 @@ table{
 }
 
 ul{
-  margin:convert-px-em(5px);
-
+  margin-top: convert-px-em(5px);
   li{
-    margin: convert-px-em(15px) 0;
-    p{
-      display: inline-block;
-      float: right;
-    }
+    background-color: white;
+    padding: convert-px-em(15px);
     h3{
       display: inline-block;
       font-weight:700;
       text-align: left;
+      width: convert-px-em(200px);
+    }
+    p{
+      display: inline-block;
+      text-align: center;
     }
   }
+  li:nth-child(2n){
+    background-color: #949494;
+  }
+
 }
+
 
 /*Layout Styles(IDs)*/
 // #new_serving_button{
@@ -118,18 +124,23 @@ ul{
   position: absolute;
   top: convert-px-em(199px);
   left: convert-px-em(1px);
+  padding:convert-px-em(14px) 0;
+  background: none;
 }
 
 #back_btn_new_food{
   position: absolute;
   top: convert-px-em(363px);
   left: convert-px-em(1px);
+  padding:convert-px-em(14px) 0;
+  background: none;
 }
 
 #new_serving_btn{
   position: absolute;
   top: convert-px-em(70px);
   right: convert-px-em(2px);
+  background: none;
   a{
     padding: convert-px-em(5px);
     margin: 0;
@@ -203,7 +214,9 @@ ul{
   padding-left: convert-px-em(2px);
   font-weight:700;
 }
-
+.food_name{
+  font-size: convert-px-em(24px);
+}
 
 //TODO: find out how to alternate colors between data rows.
 // tbody:nth-child(3n+1){
@@ -218,6 +231,7 @@ ul{
   table{
     margin-left: convert-px-em(15px);
     margin-right: convert-px-em(15px);
+    font-size: convert-px-em(17px);
   }
   .entry_actions{
     padding-bottom: convert-px-em(25px);
@@ -262,14 +276,14 @@ ul{
   }
   #new_serving_btn{
     top: convert-px-em(115px);
-    left: convert-px-em(10px);
+    left: convert-px-em(0px);
   }
   #back_btn_new_serv{
     top: convert-px-em(244px);
     left: convert-px-em(700px);
   }
   #back_btn_new_food{
-    top: convert-px-em(475px);
+    top: convert-px-em(476px);
     left: convert-px-em(700px);
   }
   #footer{
